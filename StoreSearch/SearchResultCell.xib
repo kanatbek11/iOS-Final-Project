@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" id="Veh-PY-3Ht" customClass="SearchResultCell" customModule="StoreSearch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Veh-PY-3Ht" id="XaN-3u-1Sp">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2yy-CZ-2qP">
+                        <rect key="frame" x="16" y="11.5" width="60" height="57"/>
+                        <color key="tintColor" systemColor="systemGrayColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="2zf-K9-59S"/>
+                            <constraint firstAttribute="height" constant="60" id="ssV-Gk-hJI"/>
+                        </constraints>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="thin"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuS-r5-zys">
+                        <rect key="frame" x="84" y="16" width="275" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCp-0C-nmT">
+                        <rect key="frame" x="84" y="44" width="275" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" name="ArtistName"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2yy-CZ-2qP" firstAttribute="top" secondItem="XaN-3u-1Sp" secondAttribute="top" constant="10" id="M4B-xn-ydJ"/>
+                    <constraint firstItem="FCp-0C-nmT" firstAttribute="top" secondItem="OuS-r5-zys" secondAttribute="bottom" constant="6" id="V8x-rb-Yb7"/>
+                    <constraint firstItem="OuS-r5-zys" firstAttribute="leading" secondItem="2yy-CZ-2qP" secondAttribute="trailing" constant="8" id="et3-Ee-lAP"/>
+                    <constraint firstAttribute="bottom" secondItem="FCp-0C-nmT" secondAttribute="bottom" constant="18" id="iMG-1z-srq"/>
+                    <constraint firstAttribute="trailing" secondItem="OuS-r5-zys" secondAttribute="trailing" constant="16" id="oqI-sF-TNo"/>
+                    <constraint firstItem="2yy-CZ-2qP" firstAttribute="leading" secondItem="XaN-3u-1Sp" secondAttribute="leading" constant="16" id="sKs-6w-ENc"/>
+                    <constraint firstItem="OuS-r5-zys" firstAttribute="top" secondItem="XaN-3u-1Sp" secondAttribute="top" constant="16" id="v2d-un-DtG"/>
+                    <constraint firstAttribute="trailing" secondItem="FCp-0C-nmT" secondAttribute="trailing" constant="16" id="y9Q-yB-HtX"/>
+                    <constraint firstItem="FCp-0C-nmT" firstAttribute="leading" secondItem="2yy-CZ-2qP" secondAttribute="trailing" constant="8" id="yEm-da-ZrH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="artistNameLabel" destination="FCp-0C-nmT" id="CZ2-Rr-4Zu"/>
+                <outlet property="artworkImageView" destination="2yy-CZ-2qP" id="3hB-ul-Ksj"/>
+                <outlet property="nameLabel" destination="OuS-r5-zys" id="mmA-oz-gRj"/>
+            </connections>
+            <point key="canvasLocation" x="-138" y="75"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="square" catalog="system" width="128" height="114"/>
+        <namedColor name="ArtistName">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
